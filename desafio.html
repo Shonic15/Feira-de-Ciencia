@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Desafio - IA ou Real?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏆 Desafio: IA ou Real?</h1>
+        <p>Você consegue descobrir qual imagem foi feita por Inteligência Artificial?</p>
+    </header>
+
+    <nav>
+        <a href="menu.html">🏠 Início</a>
+        <a href="vantagens.html">✅ Vantagens</a>
+        <a href="desvantagens.html">⚠️ Desvantagens</a>
+        <a href="origem.html">📜 Origem</a>
+        <a href="conclusao.html">📚 Conclusão</a>
+        <a href="desafio.html">🏆 Desafio</a>
+    </nav>
+
+    <main class="container desafio">
+
+        <h2>🤔 Qual imagem foi criada por IA?</h2>
+
+        <p>
+            Observe as duas imagens abaixo com atenção.
+            Uma foi criada por Inteligência Artificial e a outra
+            é uma fotografia real.
+        </p>
+
+        <div class="imagens-desafio">
+
+            <div class="imagem-card">
+                <h3>Imagem 1</h3>
+
+                <img src="ImagemdeIA.png" alt="Imagem 1">
+
+                <button onclick="responder(1)">
+                    Escolher Imagem 1
+                </button>
+            </div>
+
+
+            <div class="imagem-card">
+                <h3>Imagem 2</h3>
+
+                <img src="ImagemReal.webp" alt="Imagem 2">
+
+                <button onclick="responder(2)">
+                    Escolher Imagem 2
+                </button>
+            </div>
+
+        </div>
+
+
+        <div id="resultado" class="resultado"></div>
+
+
+        <div class="destaque">
+
+            <h3>💡 Dica</h3>
+
+            <p>
+                Observe detalhes como mãos, olhos, objetos, textos,
+                iluminação e pequenos elementos da imagem.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Trabalho sobre Inteligência Artificial</p>
+    </footer>
+
+
+    <script>
+
+        function responder(escolha) {
+
+            const resultado = document.getElementById("resultado");
+
+            // Altere o número abaixo para definir a resposta correta.
+            const respostaCorreta = 1;
+
+            if (escolha === respostaCorreta) {
+
+                resultado.innerHTML =
+                    "🎉 <strong>Acertou!</strong> A Imagem " +
+                    escolha +
+                    " foi criada por Inteligência Artificial.";
+
+                resultado.className = "resultado correto";
+
+            } else {
+
+                resultado.innerHTML =
+                    "❌ <strong>Não foi dessa vez!</strong> " +
+                    "A imagem criada por IA era a Imagem " +
+                    respostaCorreta +
+                    ".";
+
+                resultado.className = "resultado errado";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+
